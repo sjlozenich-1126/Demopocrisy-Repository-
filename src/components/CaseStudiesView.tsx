@@ -118,7 +118,7 @@ export const CaseStudiesView: React.FC<CaseStudiesViewProps> = ({
                       <span className="text-[#111111] font-bold">{cs.caseNumber}</span>
                       <div className="flex items-center gap-1.5 text-[#E53935] font-bold">
                         <span>Score D:</span>
-                        <span className="bg-[#FBEAE8] px-1.5 py-0.5 text-xs">{cs.discrepancyScore}/100</span>
+                        <span className="bg-[#FFEBEE] px-1.5 py-0.5 text-xs">{cs.discrepancyScore}/100</span>
                       </div>
                     </div>
 
@@ -255,32 +255,32 @@ export const CaseStudiesView: React.FC<CaseStudiesViewProps> = ({
           {/* TAB 1: NARRATIVE & ORIGINS */}
           {activeSectionTab === 'summary' && (
             <div className="space-y-8">
-              <div className="bg-white p-6 lg:p-8 rounded border border-[#E8E2D7]">
-                <h3 className="font-serif-editorial text-2xl font-bold text-[#171513] mb-4">
+              <div className="bg-white p-6 lg:p-8 border border-[#E5E5E1]">
+                <h3 className="font-headline text-2xl font-bold text-[#111111] mb-4">
                   Contextual Origins & Trigger Mechanics
                 </h3>
-                <p className="text-base text-[#57534E] leading-relaxed mb-6">
+                <p className="text-base text-[#444444] leading-relaxed mb-6 font-sans-body">
                   {selectedCase.contextualOrigins}
                 </p>
 
-                <h4 className="font-serif-editorial text-xl font-bold text-[#171513] mb-3">
+                <h4 className="font-headline text-xl font-bold text-[#111111] mb-3">
                   Narrative Sequence of Events
                 </h4>
-                <div className="bg-[#FBF9F5] p-5 rounded border border-[#E8E2D7] text-[#171513] leading-relaxed text-sm drop-cap-editorial">
+                <div className="bg-[#FAF9F6] p-5 border border-[#E5E5E1] text-[#111111] leading-relaxed text-sm pp-dropcap font-sans-body">
                   {selectedCase.narrativeSummary}
                 </div>
               </div>
 
               {/* Systemic Variables Table */}
-              <div className="bg-white p-6 rounded border border-[#E8E2D7]">
-                <h4 className="font-serif-editorial text-lg font-bold text-[#171513] mb-4">
+              <div className="bg-white p-6 border border-[#E5E5E1]">
+                <h4 className="font-headline text-lg font-bold text-[#111111] mb-4">
                   Recorded Systemic Variables
                 </h4>
-                <div className="divide-y divide-[#E8E2D7] text-xs">
+                <div className="divide-y divide-[#E5E5E1] text-xs">
                   {Object.entries(selectedCase.systemicVariables).map(([k, v]) => (
                     <div key={k} className="py-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                      <span className="font-semibold text-[#171513]">{k}</span>
-                      <span className="text-[#57534E] font-mono-data sm:text-right">{v}</span>
+                      <span className="font-semibold text-[#111111]">{k}</span>
+                      <span className="text-[#444444] font-mono-data sm:text-right">{v}</span>
                     </div>
                   ))}
                 </div>
@@ -291,47 +291,47 @@ export const CaseStudiesView: React.FC<CaseStudiesViewProps> = ({
           {/* TAB 2: PROCEDURAL COLLAPSE */}
           {activeSectionTab === 'collapse' && (
             <div className="space-y-8">
-              <div className="bg-white p-6 lg:p-8 rounded border border-[#E8E2D7]">
-                <div className="flex items-center gap-2 text-xs font-mono-data text-[#E6392E] uppercase font-semibold mb-2">
+              <div className="bg-white p-6 lg:p-8 border border-[#E5E5E1]">
+                <div className="flex items-center gap-2 text-xs font-mono-data text-[#E53935] uppercase font-semibold mb-2">
                   <AlertTriangle className="w-4 h-4" />
                   <span>Breakdown of Due Process Chain</span>
                 </div>
-                <h3 className="font-serif-editorial text-2xl font-bold text-[#171513] mb-4">
+                <h3 className="font-headline text-2xl font-bold text-[#111111] mb-4">
                   The Specific Mechanical Failure of Justice
                 </h3>
-                <p className="text-base text-[#57534E] leading-relaxed mb-6">
+                <p className="text-base text-[#444444] leading-relaxed mb-6 font-sans-body">
                   {selectedCase.proceduralCollapse}
                 </p>
 
-                <div className="bg-[#FEECEB]/60 border-l-4 border-[#E6392E] p-4 rounded-r mb-6">
-                  <h4 className="text-xs uppercase tracking-wider font-bold text-[#E53935] mb-1">
+                <div className="bg-[#FFEBEE]/60 border-l-4 border-[#E53935] p-4 mb-6">
+                  <h4 className="text-xs uppercase tracking-wider font-bold text-[#E53935] mb-1 font-mono-data">
                     Operative Procedural Breach
                   </h4>
-                  <p className="text-sm text-[#171513] leading-relaxed">
+                  <p className="text-sm text-[#111111] leading-relaxed font-sans-body">
                     {selectedCase.proceduralBreach}
                   </p>
                 </div>
 
-                <h4 className="font-serif-editorial text-xl font-bold text-[#171513] mb-3">
+                <h4 className="font-headline text-xl font-bold text-[#111111] mb-3">
                   Interaction Model: Asymmetrical Authority
                 </h4>
-                <p className="text-sm text-[#57534E] leading-relaxed bg-[#FBF9F5] p-4 rounded border border-[#E8E2D7]">
+                <p className="text-sm text-[#444444] leading-relaxed bg-[#FAF9F6] p-4 border border-[#E5E5E1] font-sans-body">
                   {selectedCase.interactionModel}
                 </p>
               </div>
 
               {/* Systemic Vulnerability Vectors */}
-              <div className="bg-white p-6 rounded border border-[#E8E2D7]">
-                <h4 className="font-serif-editorial text-lg font-bold text-[#171513] mb-4">
+              <div className="bg-white p-6 border border-[#E5E5E1]">
+                <h4 className="font-headline text-lg font-bold text-[#111111] mb-4">
                   Identified Institutional Vulnerability Vectors
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {selectedCase.systemicVulnerabilities.map((v, idx) => (
-                    <div key={idx} className="p-4 bg-[#FBF9F5] rounded border border-[#E8E2D7]">
-                      <div className="text-xs font-bold text-[#E6392E] mb-1 font-mono-data">
+                    <div key={idx} className="p-4 bg-[#FAF9F6] border border-[#E5E5E1]">
+                      <div className="text-xs font-bold text-[#E53935] mb-1 font-mono-data">
                         Vector: {v.vector}
                       </div>
-                      <p className="text-xs text-[#57534E] leading-relaxed">
+                      <p className="text-xs text-[#444444] leading-relaxed font-sans-body">
                         {v.manifestation}
                       </p>
                     </div>
@@ -343,25 +343,25 @@ export const CaseStudiesView: React.FC<CaseStudiesViewProps> = ({
 
           {/* TAB 3: CONSTITUTIONAL VIOLATIONS */}
           {activeSectionTab === 'violations' && (
-            <div className="bg-white p-6 lg:p-8 rounded border border-[#E8E2D7]">
-              <h3 className="font-serif-editorial text-2xl font-bold text-[#171513] mb-2">
+            <div className="bg-white p-6 lg:p-8 border border-[#E5E5E1]">
+              <h3 className="font-headline text-2xl font-bold text-[#111111] mb-2">
                 Documented Constitutional & Statutory Violations
               </h3>
-              <p className="text-sm text-[#78716C] mb-6">
+              <p className="text-sm text-[#666666] mb-6 font-sans-body">
                 Operational deviations evaluated against governing Federal Bill of Rights provisions and Washington State Constitutional guarantees.
               </p>
 
               <div className="space-y-4">
                 {selectedCase.violations.map((vio, idx) => (
-                  <div key={idx} className="p-4 bg-[#FBF9F5] rounded border border-[#E8E2D7] flex items-start gap-4">
-                    <div className="w-8 h-8 rounded bg-[#FEECEB] text-[#E6392E] flex items-center justify-center shrink-0 mt-0.5">
+                  <div key={idx} className="p-4 bg-[#FAF9F6] border border-[#E5E5E1] flex items-start gap-4">
+                    <div className="w-8 h-8 bg-[#FFEBEE] text-[#E53935] flex items-center justify-center shrink-0 mt-0.5">
                       <Scale className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold uppercase tracking-wider text-[#E6392E] font-mono-data">
+                      <div className="text-xs font-bold uppercase tracking-wider text-[#E53935] font-mono-data">
                         {vio.amendment}
                       </div>
-                      <p className="text-sm font-medium text-[#171513] mt-1 leading-relaxed">
+                      <p className="text-sm font-medium text-[#111111] mt-1 leading-relaxed font-sans-body">
                         {vio.violation}
                       </p>
                     </div>
@@ -369,11 +369,11 @@ export const CaseStudiesView: React.FC<CaseStudiesViewProps> = ({
                 ))}
               </div>
 
-              <div className="mt-8 pt-6 border-t border-[#E8E2D7]">
-                <h4 className="font-serif-editorial text-lg font-bold text-[#171513] mb-2">
+              <div className="mt-8 pt-6 border-t border-[#E5E5E1]">
+                <h4 className="font-headline text-lg font-bold text-[#111111] mb-2">
                   Evidentiary Landscape Status
                 </h4>
-                <p className="text-sm text-[#57534E] leading-relaxed">
+                <p className="text-sm text-[#444444] leading-relaxed font-sans-body">
                   {selectedCase.evidenceAndInformation}
                 </p>
               </div>
@@ -383,20 +383,20 @@ export const CaseStudiesView: React.FC<CaseStudiesViewProps> = ({
           {/* TAB 4: CASE DOCUMENTS IN VAULT */}
           {activeSectionTab === 'documents' && (
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded border border-[#E8E2D7]">
+              <div className="bg-white p-6 border border-[#E5E5E1]">
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <h3 className="font-serif-editorial text-2xl font-bold text-[#171513]">
+                    <h3 className="font-headline text-2xl font-bold text-[#111111]">
                       Original Court Filings & Exhibits ({caseDocuments.length})
                     </h3>
-                    <p className="text-xs text-[#78716C]">
+                    <p className="text-xs text-[#666666] font-sans-body">
                       Full scanned PDF court documents and forensic filings accessible directly from Google Drive.
                     </p>
                   </div>
                 </div>
 
                 {caseDocuments.length === 0 ? (
-                  <div className="p-8 text-center text-[#78716C] bg-[#FBF9F5] rounded border border-[#E8E2D7]">
+                  <div className="p-8 text-center text-[#666666] bg-[#FAF9F6] border border-[#E5E5E1] font-sans-body text-xs">
                     No specific documents isolated for this sub-case; see master repository.
                   </div>
                 ) : (
@@ -404,25 +404,25 @@ export const CaseStudiesView: React.FC<CaseStudiesViewProps> = ({
                     {caseDocuments.map((doc) => (
                       <div
                         key={doc.id}
-                        className="p-4 bg-[#FBF9F5] rounded border border-[#E8E2D7] hover:border-[#E6392E] transition-all flex flex-col justify-between"
+                        className="p-4 bg-[#FAF9F6] border border-[#E5E5E1] hover:border-[#111111] transition-all flex flex-col justify-between"
                       >
                         <div>
-                          <div className="flex items-center justify-between text-[11px] font-mono-data text-[#78716C] mb-2">
+                          <div className="flex items-center justify-between text-[11px] font-mono-data text-[#666666] mb-2">
                             <span>Case {doc.caseNumber}</span>
                             <span>{doc.dateCreated.split(' ')[0]}</span>
                           </div>
-                          <h4 className="font-serif-editorial text-base font-bold text-[#171513] leading-snug mb-1">
+                          <h4 className="font-headline text-base font-bold text-[#111111] leading-snug mb-1">
                             {doc.fileName}
                           </h4>
-                          <p className="text-xs text-[#57534E] line-clamp-2 mb-3">
+                          <p className="text-xs text-[#444444] line-clamp-2 mb-3 font-sans-body">
                             {doc.description}
                           </p>
                         </div>
 
-                        <div className="pt-3 border-t border-[#E8E2D7] flex items-center justify-between gap-2">
+                        <div className="pt-3 border-t border-[#E5E5E1] flex items-center justify-between gap-2">
                           <button
                             onClick={() => onInspectDocument(doc)}
-                            className="text-xs font-semibold text-[#171513] hover:text-[#E6392E] cursor-pointer"
+                            className="text-xs font-semibold text-[#111111] hover:text-[#E53935] cursor-pointer font-sans-body"
                           >
                             Examine Metadata
                           </button>
@@ -430,7 +430,7 @@ export const CaseStudiesView: React.FC<CaseStudiesViewProps> = ({
                             href={doc.fileUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold text-white bg-[#E6392E] hover:bg-[#E53935] rounded transition-colors"
+                            className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-white bg-[#E53935] hover:bg-[#C62828] transition-colors"
                           >
                             <span>Open Drive PDF</span>
                             <ExternalLink className="w-3 h-3" />
@@ -446,21 +446,21 @@ export const CaseStudiesView: React.FC<CaseStudiesViewProps> = ({
 
           {/* TAB 5: PROPOSED REFORMS */}
           {activeSectionTab === 'reforms' && (
-            <div className="bg-white p-6 lg:p-8 rounded border border-[#E8E2D7]">
-              <h3 className="font-serif-editorial text-2xl font-bold text-[#171513] mb-2">
+            <div className="bg-white p-6 lg:p-8 border border-[#E5E5E1]">
+              <h3 className="font-headline text-2xl font-bold text-[#111111] mb-2">
                 Directives & Remedial Mandates
               </h3>
-              <p className="text-sm text-[#78716C] mb-6">
+              <p className="text-sm text-[#666666] mb-6 font-sans-body">
                 Specific statutory and administrative interventions designed to eliminate the systemic failure modes exposed in this docket.
               </p>
 
               <div className="space-y-4">
                 {selectedCase.proposedReforms.map((rf, idx) => (
-                  <div key={idx} className="p-4 bg-[#FBF9F5] rounded border border-[#E8E2D7]">
-                    <div className="text-xs font-bold text-[#E6392E] font-mono-data mb-1">
+                  <div key={idx} className="p-4 bg-[#FAF9F6] border border-[#E5E5E1]">
+                    <div className="text-xs font-bold text-[#E53935] font-mono-data mb-1">
                       Reform {idx + 1}: {rf.name}
                     </div>
-                    <p className="text-sm text-[#171513] leading-relaxed">
+                    <p className="text-sm text-[#111111] leading-relaxed font-sans-body">
                       {rf.description}
                     </p>
                   </div>

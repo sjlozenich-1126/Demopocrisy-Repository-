@@ -33,7 +33,7 @@ export const TimelineView: React.FC<TimelineViewProps> = ({
   const getCategoryColor = (cat: string) => {
     switch (cat) {
       case 'arrest':
-        return 'text-[#E6392E] bg-[#FEECEB] border-[#E6392E]/30';
+        return 'text-[#E53935] bg-[#FFEBEE] border-[#E53935]/30';
       case 'medical':
         return 'text-amber-700 bg-amber-50 border-amber-200';
       case 'judicial':

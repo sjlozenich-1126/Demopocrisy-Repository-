@@ -183,7 +183,7 @@ export const SystemsAnalysisView: React.FC = () => {
                 </thead>
                 <tbody className="divide-y divide-[#E5E5E1]">
                   {HARBORVIEW_CSF_AUDIT.map((row, idx) => (
-                    <tr key={idx} className={row.concordant ? 'bg-white' : 'bg-[#FBEAE8]/40'}>
+                    <tr key={idx} className={row.concordant ? 'bg-white' : 'bg-[#FFEBEE]/40'}>
                       <td className="py-3 px-4 font-bold text-[#111111]">
                         {row.parameter}
                       </td>
@@ -200,7 +200,7 @@ export const SystemsAnalysisView: React.FC = () => {
                         {row.concordant ? (
                           <span className="text-emerald-700 font-bold text-xs uppercase font-mono-data">Concordant</span>
                         ) : (
-                          <span className="text-[#E53935] font-bold text-xs bg-[#FBEAE8] px-2 py-0.5 font-mono-data uppercase">Discordant</span>
+                          <span className="text-[#E53935] font-bold text-xs bg-[#FFEBEE] px-2 py-0.5 font-mono-data uppercase">Discordant</span>
                         )}
                       </td>
                     </tr>

@@ -355,7 +355,7 @@ export const SystemsNetworkMap: React.FC<SystemsNetworkMapProps> = ({ onSelectCa
                             width={isSpdBridge ? 32 : 22}
                             height={isSpdBridge ? 32 : 22}
                             fill={isSpdBridge ? (isSelected ? '#000' : '#E53935') : isSelected ? '#111111' : '#E5E7EB'}
-                            stroke={isSpdBridge ? '#B71C1C' : isSelected ? '#E53935' : '#9CA3AF'}
+                            stroke={isSpdBridge ? '#C62828' : isSelected ? '#E53935' : '#9CA3AF'}
                             strokeWidth={isSpdBridge ? 2.5 : isSelected ? 2.5 : 1.5}
                             rx={1}
                           />
@@ -365,8 +365,8 @@ export const SystemsNetworkMap: React.FC<SystemsNetworkMapProps> = ({ onSelectCa
                         {node.shape === 'triangle' && (
                           <polygon
                             points="0,-13 11,8 -11,8"
-                            fill={node.id === 'fm-economic-root' ? '#7B1FA2' : isSelected ? '#B71C1C' : '#FEE2E2'}
-                            stroke={isSelected ? '#000' : '#DC2626'}
+                            fill={node.id === 'fm-economic-root' ? '#7B1FA2' : isSelected ? '#C62828' : '#FFEBEE'}
+                            stroke={isSelected ? '#000' : '#E53935'}
                             strokeWidth={isSelected ? 2.5 : 1.5}
                           />
                         )}
@@ -388,7 +388,7 @@ export const SystemsNetworkMap: React.FC<SystemsNetworkMapProps> = ({ onSelectCa
                           className="font-mono-data text-[9px] font-medium pointer-events-none fill-neutral-900"
                           style={{
                             fontWeight: isSelected || isSpdBridge ? '700' : '500',
-                            fill: isSelected ? '#E53935' : isSpdBridge ? '#B71C1C' : '#111111'
+                            fill: isSelected ? '#E53935' : isSpdBridge ? '#C62828' : '#111111'
                           }}
                         >
                           {node.label.length > 20 ? node.label.slice(0, 18) + '…' : node.label}

@@ -81,21 +81,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectCase, onNaviga
             <div className="mb-6">
               <div className="relative aspect-16/9 bg-stone-100 overflow-hidden border border-[#111111]">
                 <img
-                  src="/src/assets/images/demopocrisy_dossier_hero_1791480487411.jpg"
-                  alt="Forensic Legal Case Dossier and Stamped Court Records"
+                  src="/src/assets/images/seattle_justice_architecture_1791480496762.jpg"
+                  alt="King County Courthouse and Seattle Municipal Justice Complex"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-3 left-3 bg-[#111111] text-white px-2.5 py-1 text-[10px] font-mono-data uppercase font-bold tracking-wider">
-                  Primary Source Evidence
+                  Seat of Administration
                 </div>
               </div>
               <div className="pt-2 text-[11px] text-[#666666] font-sans-body flex items-baseline justify-between">
                 <span>
-                  Physical judicial dockets, unfiled booking slips, and CSF lab panels audited from King County Superior Court (2021–2026).
+                  King County Superior Court and Seattle Municipal Justice Complex, where systemic procedural due process compressions and competency loops were documented (2021–2026).
                 </span>
                 <span className="text-[10px] text-[#888888] font-mono-data shrink-0 ml-2">
-                  Photo: Demopocrisy Archive
+                  Photo: Seattle Public Archive Survey
                 </span>
               </div>
             </div>
