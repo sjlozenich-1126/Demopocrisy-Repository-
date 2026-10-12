@@ -1,4 +1,5 @@
 import React from 'react';
+import coverImage from '../assets/images/cover_image.jpg';
 import { 
   ArrowRight, Scale, Database, ChevronRight, FileText, Activity, 
   ExternalLink, Network, AlertTriangle, ShieldAlert, CheckCircle2, 
@@ -81,21 +82,26 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectCase, onNaviga
             <div className="mb-6">
               <div className="relative aspect-16/9 bg-stone-100 overflow-hidden border border-[#111111]">
                 <img
-                  src="/src/assets/images/seattle_justice_architecture_1791480496762.jpg"
-                  alt="King County Courthouse and Seattle Municipal Justice Complex"
+                  src="https://images.unsplash.com/photo-1736773544038-532c8a6024fb?w=1200&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                  srcSet="https://images.unsplash.com/photo-1736773544038-532c8a6024fb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D 500w, https://images.unsplash.com/photo-1736773544038-532c8a6024fb?w=1200&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D 1200w"
+                  sizes="(max-width: 1024px) 100vw, 800px"
+                  alt="Investigative Cover - Washington State Judicial Oversight Audit"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.src = coverImage;
+                  }}
                 />
                 <div className="absolute top-3 left-3 bg-[#111111] text-white px-2.5 py-1 text-[10px] font-mono-data uppercase font-bold tracking-wider">
-                  Seat of Administration
+                  Investigative Dossier
                 </div>
               </div>
               <div className="pt-2 text-[11px] text-[#666666] font-sans-body flex items-baseline justify-between">
                 <span>
-                  King County Superior Court and Seattle Municipal Justice Complex, where systemic procedural due process compressions and competency loops were documented (2021–2026).
+                  Washington State justice system procedural audit and constitutional compliance investigation (2021–2026).
                 </span>
                 <span className="text-[10px] text-[#888888] font-mono-data shrink-0 ml-2">
-                  Photo: Seattle Public Archive Survey
+                  Documentary Archive
                 </span>
               </div>
             </div>
