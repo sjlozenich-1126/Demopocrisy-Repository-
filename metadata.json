@@ -1,0 +1,6 @@
+{
+  "name": "Demopocrisy — Forensic Legal Case Study & Systems Analysis",
+  "description": "An investigative forensic case study, evidence vault, and systems analysis of due process failures, administrative compression, and competency loops in King County judicial proceedings (2021–2026).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

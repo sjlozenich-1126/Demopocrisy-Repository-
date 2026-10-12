@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #F9F9F9;
+    --paper-bg: #FFFFFF;
+    --ink: #111111;
+    --ink-secondary: #333333;
+    --ink-muted: #666666;
+    --ink-faint: #E5E5E1;
+    --accent: #E53935;
+    --accent-red: #E53935;
+    --accent-dark: #C62828;
+    --accent-light: #FFEBEE;
+    --paper-surface: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #F9F9F9;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: #E53935;
+    color: white;
+  }
+}
+
+/* ProPublica Headline & Editorial Serif */
+.font-headline,
+.font-serif-editorial {
+  font-family: 'Newsreader', 'Cormorant Garamond', Georgia, serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+.font-serif-cormorant {
+  font-family: 'Newsreader', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-mono-data {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ProPublica Kicker */
+.pp-kicker {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-red);
+}
+
+/* ProPublica Broadsheet Dropcap */
+.pp-dropcap::first-letter {
+  float: left;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 4.25rem;
+  line-height: 0.8;
+  padding-top: 0.35rem;
+  padding-right: 0.65rem;
+  padding-bottom: 0.1rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+/* ProPublica Callout / "What We Found" Box */
+.pp-callout {
+  border: 1px solid #E5E5E1;
+  border-left: 4px solid var(--accent-red);
+  background-color: #FAF9F6;
+  padding: 1.25rem 1.5rem;
+}
+
+/* ProPublica Numbered Badge */
+.pp-numeral {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 2.75rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ProPublica Hairline Rules */
+.pp-rule {
+  border-bottom: 1px solid #E5E5E1;
+}
+
+.pp-rule-strong {
+  border-bottom: 2px solid #111111;
+}
+
+.pp-rule-double {
+  border-top: 3px double #111111;
+}
+
+/* Meta-Label */
+.meta-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  background: #111111;
+  color: #FFFFFF;
+  padding: 3px 7px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+/* Truth Card */
+.truth-card {
+  background: #111111;
+  color: #F9F8F6;
+  padding: 2rem;
+  border-left: 4px solid var(--accent-red);
+}
+
+.truth-card blockquote {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.45;
+  font-style: italic;
+}
+
+
