@@ -9,9 +9,10 @@ import {
 interface HeroSectionProps {
   onSelectCase: (caseId: string) => void;
   onNavigate: (tab: string) => void;
+  onOpenTipModal?: () => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectCase, onNavigate }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectCase, onNavigate, onOpenTipModal }) => {
   return (
     <section className="bg-white">
       {/* =========================================================================
@@ -408,12 +409,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectCase, onNaviga
               <p className="text-xs text-stone-300 leading-relaxed mb-4">
                 Do you have records, transcripts, or information regarding RCW 10.77 pre-signed competency orders or database sync failures in Washington state courts?
               </p>
-              <button
-                onClick={() => onNavigate('vault')}
-                className="w-full py-2 bg-[#E53935] hover:bg-[#C62828] text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer text-center block"
-              >
-                Access Public Evidence Vault →
-              </button>
+              <div className="flex flex-col gap-2">
+                <button
+                  type="button"
+                  onClick={() => onOpenTipModal ? onOpenTipModal() : onNavigate('vault')}
+                  className="w-full py-2 bg-[#E53935] hover:bg-[#C62828] text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer text-center block shadow-xs"
+                >
+                  Send Evidence or Tip →
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onNavigate('vault')}
+                  className="w-full py-1.5 bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white text-[11px] font-bold uppercase tracking-wider transition-colors cursor-pointer text-center block"
+                >
+                  Access Public Evidence Vault
+                </button>
+              </div>
             </div>
           </div>
         </div>

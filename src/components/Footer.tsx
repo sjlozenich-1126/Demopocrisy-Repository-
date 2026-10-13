@@ -3,9 +3,10 @@ import { Shield, Database, Scale, ExternalLink, ArrowRight, BookOpen, AlertCircl
 
 interface FooterProps {
   onNavigate: (tab: string) => void;
+  onOpenTipModal?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenTipModal }) => {
   return (
     <footer className="bg-[#111111] text-[#CCCCCC] border-t-4 border-[#E53935] pt-12 pb-8 font-sans-body">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,8 +142,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </li>
                 <li className="pt-1">
                   <button
-                    onClick={() => onNavigate('vault')}
-                    className="text-[#E53935] hover:underline font-bold text-xs flex items-center gap-1 cursor-pointer"
+                    type="button"
+                    onClick={() => {
+                      if (onOpenTipModal) {
+                        onOpenTipModal();
+                      } else {
+                        onNavigate('vault');
+                      }
+                    }}
+                    className="text-[#E53935] hover:text-[#ff5252] hover:underline font-bold text-xs flex items-center gap-1.5 cursor-pointer bg-stone-900/80 px-2 py-1 rounded-xs border border-stone-800 hover:border-[#E53935] transition-colors"
                   >
                     <span>Send Evidence / Tip</span>
                     <ArrowRight className="w-3 h-3" />

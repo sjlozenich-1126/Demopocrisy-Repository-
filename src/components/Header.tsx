@@ -5,12 +5,14 @@ interface HeaderProps {
   activeTab: string;
   setActiveTab: (tab: string) => void;
   onOpenSearch: () => void;
+  onOpenTipModal?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   activeTab,
   setActiveTab,
   onOpenSearch,
+  onOpenTipModal,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -57,6 +59,18 @@ export const Header: React.FC<HeaderProps> = ({
             >
               75+ Court Documents & Exhibits
             </button>
+            {onOpenTipModal && (
+              <>
+                <span className="text-stone-300">|</span>
+                <button
+                  onClick={onOpenTipModal}
+                  className="flex items-center gap-1 font-bold text-[#E53935] hover:underline transition-colors cursor-pointer"
+                >
+                  <ShieldAlert className="w-3 h-3 text-[#E53935]" />
+                  <span>Send Tip</span>
+                </button>
+              </>
+            )}
             <span className="text-stone-300">|</span>
             <button
               onClick={onOpenSearch}
@@ -184,6 +198,18 @@ export const Header: React.FC<HeaderProps> = ({
                 <span>Search (⌘K)</span>
               </button>
             </div>
+            {onOpenTipModal && (
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenTipModal();
+                }}
+                className="mt-1 w-full py-2 bg-[#E53935] text-white font-bold text-center flex items-center justify-center gap-1.5 cursor-pointer"
+              >
+                <ShieldAlert className="w-4 h-4" />
+                <span>Send Evidence or Tip</span>
+              </button>
+            )}
           </div>
         </div>
       )}

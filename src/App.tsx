@@ -15,6 +15,7 @@ import { SystemsNetworkMap } from './components/SystemsNetworkMap';
 import { TheoreticalModels } from './components/TheoreticalModels';
 import { DocumentModal } from './components/DocumentModal';
 import { SearchModal } from './components/SearchModal';
+import { TipEvidenceModal } from './components/TipEvidenceModal';
 import { Footer } from './components/Footer';
 import { DOCUMENTS_ARCHIVE, LegalDocument } from './data/documentsData';
 import { ArrowRight, FileText, Database, Scale, ShieldCheck, Network, Layers } from 'lucide-react';
@@ -24,6 +25,7 @@ export default function App() {
   const [selectedCaseId, setSelectedCaseId] = useState<string | null>(null);
   const [inspectingDocument, setInspectingDocument] = useState<LegalDocument | null>(null);
   const [searchModalOpen, setSearchModalOpen] = useState<boolean>(false);
+  const [tipModalOpen, setTipModalOpen] = useState<boolean>(false);
 
   const handleSelectCase = (caseId: string | null) => {
     setSelectedCaseId(caseId);
@@ -59,6 +61,7 @@ export default function App() {
         activeTab={activeTab}
         setActiveTab={handleNavigate}
         onOpenSearch={() => setSearchModalOpen(true)}
+        onOpenTipModal={() => setTipModalOpen(true)}
       />
 
       {/* Main Content Sections */}
@@ -68,6 +71,7 @@ export default function App() {
             <HeroSection
               onSelectCase={handleSelectCase}
               onNavigate={handleNavigate}
+              onOpenTipModal={() => setTipModalOpen(true)}
             />
 
             {/* ProPublica "Impact & Accountability" Editorial Section */}
@@ -215,8 +219,17 @@ export default function App() {
         onSelectCase={handleSelectCase}
       />
 
+      {/* Global Whistleblower Tip & Evidence Modal */}
+      <TipEvidenceModal
+        isOpen={tipModalOpen}
+        onClose={() => setTipModalOpen(false)}
+      />
+
       {/* Institutional Broadsheet Footer */}
-      <Footer onNavigate={handleNavigate} />
+      <Footer 
+        onNavigate={handleNavigate} 
+        onOpenTipModal={() => setTipModalOpen(true)}
+      />
     </div>
   );
 }
