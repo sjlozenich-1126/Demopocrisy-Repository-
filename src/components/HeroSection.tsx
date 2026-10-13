@@ -92,9 +92,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectCase, onNaviga
                     e.currentTarget.src = coverImage;
                   }}
                 />
-                <div className="absolute top-3 left-3 bg-[#111111] text-white px-2.5 py-1 text-[10px] font-mono-data uppercase font-bold tracking-wider">
-                  Investigative Dossier
-                </div>
               </div>
               <div className="pt-2 text-[11px] text-[#666666] font-sans-body flex items-baseline justify-between">
                 <span>
