@@ -3,7 +3,7 @@ import coverImage from '../assets/images/cover_image.jpg';
 import { 
   ArrowRight, Scale, Database, ChevronRight, FileText, Activity, 
   ExternalLink, Network, AlertTriangle, ShieldAlert, CheckCircle2, 
-  Search, Lock, Download, Share2
+  Search, Lock, Download, Share2, Clock
 } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -78,12 +78,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectCase, onNaviga
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-14">
           {/* LEFT COLUMN: Main Investigative Feature & Findings (Col 1-8) */}
           <div className="lg:col-span-8">
-            {/* Primary Documentary Image with Broadsheet Caption */}
+            {/* Primary Documentary Image with Broadsheet Caption & Cumulative Administrative Delay */}
             <div className="mb-6">
               <div className="relative aspect-16/9 bg-stone-100 overflow-hidden border border-[#111111]">
                 <img
-                  src="https://images.unsplash.com/photo-1736773544038-532c8a6024fb?w=1200&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
-                  srcSet="https://images.unsplash.com/photo-1736773544038-532c8a6024fb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D 500w, https://images.unsplash.com/photo-1736773544038-532c8a6024fb?w=1200&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D 1200w"
+                  src="https://images.unsplash.com/photo-1641945511559-417d95a38f19?w=1200&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                  srcSet="https://images.unsplash.com/photo-1641945511559-417d95a38f19?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D 500w, https://images.unsplash.com/photo-1641945511559-417d95a38f19?w=1200&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D 1200w"
                   sizes="(max-width: 1024px) 100vw, 800px"
                   alt="Investigative Cover - Washington State Judicial Oversight Audit"
                   className="w-full h-full object-cover"
@@ -103,6 +103,26 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectCase, onNaviga
                 <span className="text-[10px] text-[#888888] font-mono-data shrink-0 ml-2">
                   Documentary Archive
                 </span>
+              </div>
+
+              {/* Cumulative Administrative Delay Notice */}
+              <div className="mt-3 p-3.5 bg-[#FAF9F6] border-l-4 border-[#E53935] border-y border-r border-[#E5E5E1] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="flex items-center gap-2.5">
+                  <Clock className="w-4 h-4 text-[#E53935] shrink-0" />
+                  <p className="font-sans-body text-xs sm:text-sm text-[#222222] leading-snug">
+                    Between all of the cases there has been a total of{' '}
+                    <span className="font-mono-data font-bold text-[#E53935] text-xs sm:text-sm bg-red-50 px-1.5 py-0.5 border border-red-200">
+                      (2,550 days)
+                    </span>{' '}
+                    of cumulative administrative delay.
+                  </p>
+                </div>
+                <div className="flex items-center gap-1.5 shrink-0 self-end sm:self-auto">
+                  <span className="w-2 h-2 rounded-full bg-[#E53935] animate-pulse"></span>
+                  <span className="text-[10px] font-mono-data uppercase tracking-wider text-[#666666] font-bold">
+                    Cumulative Metric
+                  </span>
+                </div>
               </div>
             </div>
 
