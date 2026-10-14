@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ShieldCheck, 
   Lock, 
@@ -90,8 +91,6 @@ export const TipEvidenceModal: React.FC<TipEvidenceModalProps> = ({ isOpen, onCl
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
-
-  if (!isOpen) return null;
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -187,14 +186,26 @@ export const TipEvidenceModal: React.FC<TipEvidenceModalProps> = ({ isOpen, onCl
   };
 
   return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-xs animate-in fade-in"
-      onClick={onClose}
-    >
-      <div 
-        className="bg-white border-2 border-[#111111] shadow-2xl max-w-2xl w-full max-h-[92vh] flex flex-col font-sans-body overflow-hidden"
-        onClick={(e) => e.stopPropagation()}
-      >
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div 
+          key="tip-modal-overlay"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2, ease: 'easeOut' }}
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-xs"
+          onClick={onClose}
+        >
+          <motion.div 
+            key="tip-modal-dialog"
+            initial={{ opacity: 0, scale: 0.96, y: 14 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.97, y: 10 }}
+            transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+            className="bg-white border-2 border-[#111111] shadow-2xl max-w-2xl w-full max-h-[92vh] flex flex-col font-sans-body overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
         {/* Header Bar */}
         <div className="bg-[#111111] text-white px-5 sm:px-6 py-4 flex items-center justify-between border-b-2 border-[#E53935]">
           <div className="flex items-center gap-3">
@@ -652,7 +663,9 @@ export const TipEvidenceModal: React.FC<TipEvidenceModalProps> = ({ isOpen, onCl
             </form>
           )}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
   );
 };
