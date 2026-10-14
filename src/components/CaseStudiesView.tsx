@@ -216,7 +216,7 @@ export const CaseStudiesView: React.FC<CaseStudiesViewProps> = ({
               </div>
               <div>
                 <span className="text-[#666666] block uppercase tracking-wider text-[10px] font-bold font-mono-data">Incarceration Window</span>
-                <span className="text-[#111111] font-medium mt-0.5 block font-mono-data">
+                <span className="text-[#111111] font-medium mt-0.5 block">
                   {selectedCase.incarcerationDates}
                 </span>
               </div>

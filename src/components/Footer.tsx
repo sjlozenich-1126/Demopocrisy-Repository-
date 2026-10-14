@@ -39,7 +39,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenTipModal }) =>
                     onClick={() => onNavigate('overview')}
                     className="hover:text-white transition-colors cursor-pointer text-left"
                   >
-                    The 283-Day Competency Loop
+                    Pretrial Detention Without Trial (167d & 268d)
                   </button>
                 </li>
                 <li>

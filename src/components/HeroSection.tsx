@@ -38,7 +38,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectCase, onNaviga
         {/* Lead Headline and Subhead (Dek) */}
         <div className="max-w-5xl mb-6">
           <h1 className="font-headline text-3xl sm:text-5xl lg:text-[3.65rem] font-bold text-[#111111] leading-[1.08] tracking-tight mb-4">
-            The Competency Loophole: How King County Processed an Accused Litigant Through 283 Days of Confinement Without a Trial
+            The Competency Loophole: How King County Subjected an Accused Litigant to 435 Days of Jail Confinement Across Two Cases Without a Trial
           </h1>
 
           <p className="font-headline text-lg sm:text-xl lg:text-2xl text-[#333333] leading-relaxed italic max-w-4xl">
@@ -137,8 +137,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectCase, onNaviga
                 <li className="flex items-start gap-2.5">
                   <span className="font-bold text-[#E53935] text-sm leading-none mt-0.5">1.</span>
                   <div>
-                    <strong className="text-[#111111] font-bold">283 Days Incarceration Without Trial:</strong>{' '}
-                    In Cause No. 22-1-05705-7, consecutive RCW 10.77 restoration orders reset the CrR 3.3 speedy trial clock, resulting in nearly ten months in King County Jail before the charge was dismissed without prejudice.
+                    <strong className="text-[#111111] font-bold">435 Pretrial Detention Days Without Trial (167 Days in 2021 & 268 Days in 2022):</strong>{' '}
+                    Across two separate felony prosecutions (Cause Nos. 21-1-04347-2 and 22-1-04242-3), consecutive RCW 10.77 restoration stays repeatedly reset the CrR 3.3 speedy trial clock, resulting in 167 days in 2021 and 268 days in 2022 of continuous jail incarceration without an adversarial trial or evidentiary hearing.
                   </div>
                 </li>
                 <li className="flex items-start gap-2.5">
@@ -246,7 +246,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectCase, onNaviga
                     </span>
                   </div>
                   <h4 className="font-headline text-base font-bold text-[#111111] group-hover:text-[#E53935] leading-snug">
-                    Cause No. 22-1-04242-3: The 283-Day Pretrial Loop
+                    Cause No. 22-1-04242-3: The 268-Day Pretrial Loop
                   </h4>
                   <p className="text-xs text-[#555555] line-clamp-2 mt-1">
                     Alleged phone threat where audio was never produced; 10 months continuous detention under consecutive restoration stays.
@@ -362,13 +362,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSelectCase, onNaviga
 
                 <div className="border-b border-[#E5E5E1] pb-3">
                   <div className="font-headline text-3xl font-black text-[#111111]">
-                    283
+                    435
                   </div>
                   <div className="text-[11px] font-bold text-[#111111] font-sans-body uppercase">
                     Detention Days
                   </div>
                   <div className="text-[10px] text-[#666666]">
-                    Single cause without trial
+                    167d (2021) + 268d (2022) without trial
                   </div>
                 </div>
 

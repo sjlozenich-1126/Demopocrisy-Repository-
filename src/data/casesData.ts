@@ -249,7 +249,7 @@ export const CASES_DATA: CaseStudy[] = [
     cause: "Felony Harassment, Felony Telephone Harassment (Cyberstalking), Felony Threats to Bomb or Injure Property",
     disposition: "Pending — Competency Declared Restored February 2026; Trial Dates Scheduled",
     incarcerationDates: "07/20/2021 – 01/05/2022 (Jail & Western State Hospital) + Ongoing Pretrial Supervision",
-    detentionDaysEstimate: 168,
+    detentionDaysEstimate: 167,
     discrepancyScore: 90,
     primaryMechanism: "Anonymous state arrest; warrantless device seizure; ex-parte 45-day competency hold",
     systemicImpact: "Arrest executed by unidentified agents in unmarked vehicles, followed by warrantless electronic device seizures. Judge Melinda Young issued a 45-day competency restoration order without a prior evaluation and without defense counsel present.",
